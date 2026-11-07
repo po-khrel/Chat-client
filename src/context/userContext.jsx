@@ -1,10 +1,10 @@
 import axios from "axios";
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 
 
 const UserContext = createContext(null)
-const server="http://localhost:5000"
+const server="http://localhost:4000"
 
 export const UserProvider = ({ children }) => {
     const [user, setUser] = useState(() => {
@@ -89,3 +89,5 @@ export const UserProvider = ({ children }) => {
         </UserContext.Provider>
     )
 }
+
+export const useUser = () => useContext(UserContext)

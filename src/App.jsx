@@ -1,9 +1,17 @@
-import Loading from "./components/Loading"
+import { Route, Routes } from "react-router-dom"
+import Login from "./pages/Login"
+import Register from "./pages/register"
+
 
  
 function App() {
   return (
-    <Loading />
+    <>
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+    </Routes>
+    </>
   )
 }
  
