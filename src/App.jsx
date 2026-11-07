@@ -1,11 +1,10 @@
+import Loading from "./components/Loading"
 
-
-const App = () => {
+ 
+function App() {
   return (
-    <>
-    
-    </>
+    <Loading />
   )
 }
-
+ 
 export default App
